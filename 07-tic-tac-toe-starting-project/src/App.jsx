@@ -67,7 +67,7 @@ function App() {
 
   const activePlayer = deriveActivePlayer(gameTurn);
   const gameBoard = handleGameBoard(gameTurn);
-  
+
   const winner = handleWinner(gameBoard,playerName);
   const gameDraw = gameTurn.length === 9 && !winner;
 
@@ -93,7 +93,7 @@ function App() {
       (prevPlayers) => {
         return {
           ...prevPlayers,
-          [symbol]: newName,
+          [symbol]: newName.toUpperCase(),
         }
       }
     );
